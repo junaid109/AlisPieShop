@@ -21,7 +21,7 @@ namespace AlisPieShop.Controllers
 
         public ViewResult List()
         {
-            PieListViewModel pieListViewModel = new PieListViewModel();
+            PiesListViewModel pieListViewModel = new PiesListViewModel();
             pieListViewModel.Pies = _pieRepository.Pies;
 
             pieListViewModel.CurrentCategory = "Cheese Cakes";
