@@ -33,6 +33,11 @@ namespace AlisPieShop
                                          options.UseMySQL(_configurationRoot.GetConnectionString("DefaultConnection")));
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IPieRepository, PieRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+
+            services.AddMemoryCache();
+            services.AddSession();
             services.AddMvc();
         }
 
@@ -44,12 +49,15 @@ namespace AlisPieShop
                 app.UseDeveloperExceptionPage();
                 app.UseStatusCodePages();
                 app.UseStaticFiles();
+               
                 app.UseMvcWithDefaultRoute();
             }
 
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
+            //   DbInitializer.Seed(app);
 
             app.Run(async (context) =>
             {

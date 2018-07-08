@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace AlisPieShop.Models
 {
@@ -14,6 +13,7 @@ namespace AlisPieShop.Models
         {
             _appDbContext = appDbContext;
         }
+
         public IEnumerable<Pie> Pies
         {
             get

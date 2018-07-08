@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using AlisPieShop.Models;
 
-namespace BethanysPieShop.Models
+namespace AlisPieShop.Models
 {
     public class ShoppingCart
     {
@@ -107,7 +107,8 @@ namespace BethanysPieShop.Models
 
         public decimal GetShoppingCartTotal()
         {
-            var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
+            var total = _appDbContext.ShoppingCartItems.Where(
+                c => c.ShoppingCartId == ShoppingCartId)
                 .Select(c => c.Pie.Price * c.Amount).Sum();
             return total;
         }

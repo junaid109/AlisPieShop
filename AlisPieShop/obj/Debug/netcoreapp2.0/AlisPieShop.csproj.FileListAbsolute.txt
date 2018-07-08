@@ -9,3 +9,6 @@ C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netco
 C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\bin\Debug\netcoreapp2.0\AlisPieShop.pdb
 C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.dll
 C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.pdb
+C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.Properties.Resources.resources
+C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.csproj.GenerateResource.Cache
