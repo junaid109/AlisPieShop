@@ -21,11 +21,11 @@ namespace AlisPieShop.Controllers
 
         public ViewResult List()
         {
-            PiesListViewModel pieListViewModel = new PiesListViewModel();
-            pieListViewModel.Pies = _pieRepository.Pies;
+            PiesListViewModel piesListViewModel = new PiesListViewModel();
+            piesListViewModel.Pies = _pieRepository.Pies;
 
-            pieListViewModel.CurrentCategory = "Cheese Cakes";
-            return View(pieListViewModel);
+            piesListViewModel.CurrentCategory = "Cheese cakes";
+            return View(piesListViewModel);
         }
     }
 }

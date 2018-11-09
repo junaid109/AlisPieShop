@@ -12,3 +12,17 @@ C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netco
 C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.Properties.Resources.resources
 C:\Users\junai\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.csproj.GenerateResource.Cache
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\bin\Debug\netcoreapp2.0\AlisPieShop.deps.json
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\bin\Debug\netcoreapp2.0\AlisPieShop.runtimeconfig.json
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\bin\Debug\netcoreapp2.0\AlisPieShop.runtimeconfig.dev.json
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\bin\Debug\netcoreapp2.0\AlisPieShop.dll
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\bin\Debug\netcoreapp2.0\AlisPieShop.pdb
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.csprojAssemblyReference.cache
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.Properties.Resources.resources
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.csproj.GenerateResource.cache
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.csproj.CoreCompileInputs.cache
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.AssemblyInfoInputs.cache
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.AssemblyInfo.cs
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.dll
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.pdb
