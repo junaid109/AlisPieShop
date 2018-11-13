@@ -9,7 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using AlisPieShop.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
-using MySql.Data.EntityFrameworkCore.Extensions;
 
 namespace AlisPieShop
 {
@@ -28,41 +27,26 @@ namespace AlisPieShop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
 
-            services.AddDbContext<AppDbContext>(options =>
-                                         options.UseMySQL(_configurationRoot.GetConnectionString("DefaultConnection")));
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IPieRepository, PieRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+          //  services.AddScoped(sp => ShoppingCart.GetCart(sp));
 
             services.AddMemoryCache();
-            services.AddSession();
+         // services.AddSession();
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public static void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseStatusCodePages();
-                app.UseStaticFiles();
-               
-                app.UseMvcWithDefaultRoute();
-            }
-
+            app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseSession();
             app.UseMvcWithDefaultRoute();
-            //   DbInitializer.Seed(app);
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Test");
-            });
+            DbInitializer.Seed(app);
         }
     }
 }
