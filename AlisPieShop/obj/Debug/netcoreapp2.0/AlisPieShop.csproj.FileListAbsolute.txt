@@ -25,3 +25,4 @@ C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieSh
 C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\bin\Debug\netcoreapp2.0\AlisPieShop.pdb
 C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.dll
 C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.pdb
+C:\Users\Junaid Malik.N2OLIMITED\Documents\Github Projects\AlisPieShop\AlisPieShop\obj\Debug\netcoreapp2.0\AlisPieShop.csprojAssemblyReference.cache

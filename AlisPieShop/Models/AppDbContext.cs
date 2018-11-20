@@ -10,6 +10,7 @@ namespace AlisPieShop.Models
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
+
         }
 
         public DbSet<Pie> Pies { get; set; }
@@ -17,6 +18,5 @@ namespace AlisPieShop.Models
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
-
     }
 }
