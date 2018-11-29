@@ -13242,7 +13242,7 @@
       ]
     },
     "System.ValueTuple/4.4.0": {
-      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+      "sha512": "6Q0G6eOtw6TqC632GblwOK08YzfxT/Wg631qXRDQ0aIq5+hJHqwBCGNWGx3kzCbUMkSaiKO44c1oK519EVAb8g==",
       "type": "package",
       "path": "system.valuetuple/4.4.0",
       "files": [
@@ -13647,9 +13647,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Users\\junai\\Documents\\Github Projects\\AlisPieShop\\AlisPieShop\\AlisPieShop.csproj",
       "projectName": "AlisPieShop",
@@ -13685,54 +13682,54 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "MySql.Data.EntityFrameworkCore": {
+          "Microsoft.AspNet.Razor": {
             "target": "Package",
-            "version": "6.10.6"
-          },
-          "Microsoft.AspNetCore": {
-            "target": "Package",
-            "version": "2.0.1"
-          },
-          "MySql.Data": {
-            "target": "Package",
-            "version": "6.10.6"
-          },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "MySQL.Data.Entities": {
-            "target": "Package",
-            "version": "6.8.3"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
-          "Microsoft.AspNet.WebApi.WebHost": {
-            "target": "Package",
-            "version": "5.2.3"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "MySql.Data.Entity": {
-            "target": "Package",
-            "version": "6.10.6"
+            "version": "[3.2.3, )"
           },
           "Microsoft.AspNet.WebApi": {
             "target": "Package",
-            "version": "5.2.3"
+            "version": "[5.2.3, )"
           },
-          "Microsoft.AspNet.Razor": {
+          "Microsoft.AspNet.WebApi.WebHost": {
             "target": "Package",
-            "version": "3.2.3"
+            "version": "[5.2.3, )"
+          },
+          "Microsoft.AspNetCore": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "MySQL.Data.Entities": {
+            "target": "Package",
+            "version": "[6.8.3, )"
+          },
+          "MySql.Data": {
+            "target": "Package",
+            "version": "[6.10.6, )"
+          },
+          "MySql.Data.Entity": {
+            "target": "Package",
+            "version": "[6.10.6, )"
+          },
+          "MySql.Data.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.10.6, )"
           },
           "MySql.Web": {
             "target": "Package",
-            "version": "6.10.6"
+            "version": "[6.10.6, )"
           }
         },
         "imports": [
