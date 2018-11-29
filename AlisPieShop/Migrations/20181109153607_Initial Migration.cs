@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace AlisPieShop.Migrations
 {
-    public partial class initial : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,14 +51,43 @@ namespace AlisPieShop.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ShoppingCartItems",
+                columns: table => new
+                {
+                    ShoppingCartItemID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Amount = table.Column<int>(type: "int", nullable: false),
+                    PieId = table.Column<int>(type: "int", nullable: true),
+                    ShoppingCartId = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ShoppingCartItems", x => x.ShoppingCartItemID);
+                    table.ForeignKey(
+                        name: "FK_ShoppingCartItems_Pies_PieId",
+                        column: x => x.PieId,
+                        principalTable: "Pies",
+                        principalColumn: "PieId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Pies_CategoryId",
                 table: "Pies",
                 column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShoppingCartItems_PieId",
+                table: "ShoppingCartItems",
+                column: "PieId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ShoppingCartItems");
+
             migrationBuilder.DropTable(
                 name: "Pies");
 

@@ -9,8 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using AlisPieShop.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
-using MySql.Data.EntityFrameworkCore.Extensions;
-using Microsoft.Extensions.Logging;
 
 namespace AlisPieShop
 {
@@ -29,50 +27,26 @@ namespace AlisPieShop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options =>
-                                         options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
 
-            //services.AddTransient<ICategoryRepository, MockCategoryRepository>();
-            //services.AddTransient<IPieRepository, MockPieRepository>();
-
-            services.AddTransient<IPieRepository, PieRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IPieRepository, PieRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
-          //  services.AddTransient<IOrderRepository, OrderRepository>();
-
-            services.AddMvc();
+          //  services.AddScoped(sp => ShoppingCart.GetCart(sp));
 
             services.AddMemoryCache();
-            services.AddSession();
+         // services.AddSession();
+            services.AddMvc();
         }
 
-
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public static void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseSession();
-
-            //app.UseMvcWithDefaultRoute();
-
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                  name: "categoryfilter",
-                  template: "Pie/{action}/{category?}",
-                  defaults: new { Controller = "Pie", action = "List" });
-
-                routes.MapRoute(
-                name: "default",
-                template: "{controller=Home}/{action=Index}/{id?}");
-
-
-            });
+            app.UseMvcWithDefaultRoute();
             DbInitializer.Seed(app);
         }
     }
-
 }

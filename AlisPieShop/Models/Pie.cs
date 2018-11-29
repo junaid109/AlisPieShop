@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 namespace AlisPieShop.Models
 {
     public class Pie
+
     {
         public int PieId { get; set; }
 

@@ -11,7 +11,7 @@ namespace AlisPieShop.Models
     {
         public static void Seed(IApplicationBuilder applicationBuilder)
         {
-            AppDbContext context = applicationBuilder.ApplicationServices.GetRequiredService<AppDbContext>();
+            var context = applicationBuilder.ApplicationServices.GetRequiredService<AppDbContext>();
 
             if (!context.Categories.Any())
             {
@@ -50,7 +50,7 @@ namespace AlisPieShop.Models
                     {
                         new Category { CategoryName = "Fruit pies" },
                         new Category { CategoryName = "Cheese cakes" },
-                        new Category { CategoryName = "Seasonal pies" }
+                        new Category { CategoryName = "Seasonal pies" },
                     };
 
                     categories = new Dictionary<string, Category>();
