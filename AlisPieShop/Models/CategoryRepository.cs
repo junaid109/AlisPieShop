@@ -5,15 +5,14 @@ using System.Threading.Tasks;
 
 namespace AlisPieShop.Models
 {
-        public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : ICategoryRepository
+    {
+        private readonly AppDbContext _appDbContext;
+
+        public CategoryRepository(AppDbContext appDbContext)
         {
-            private readonly AppDbContext _appDbContext;
-
-            public CategoryRepository(AppDbContext appDbContext)
-            {
-                _appDbContext = appDbContext;
-            }
-            public IEnumerable<Category> Categories => _appDbContext.Categories;
+            _appDbContext = appDbContext;
         }
- }
-
+        public IEnumerable<Category> Categories => _appDbContext.Categories;
+    }
+}

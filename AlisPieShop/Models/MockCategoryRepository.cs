@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AlisPieShop.Models
+namespace AlisPieShop.Models 
 {
-    public class MockCategoryRepository : ICategoryRepository
+    public class MockCategoryRepository: ICategoryRepository
     {
         public IEnumerable<Category> Categories
         {

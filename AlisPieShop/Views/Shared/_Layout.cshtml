@@ -10,8 +10,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <title>Ali's Pie Shop</title>
 </head>
-
 <body>
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -29,16 +29,16 @@
                     <li><a asp-controller="Contact" asp-action="Index">Contact us</a></li>
                     @await Component.InvokeAsync("ShoppingCartSummary")
                 </ul>
+                @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
     </nav>
-
 
     <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <p class="lead">
-                    <img class="img-responsive" alt="Ali's Pie Shop'" src="~/Images/alilogo.png" />
+                    <img class="img-responsive" alt="Bethany's Pie Shop'" src="~/Images/bethanylogo.png" />
                 </p>
             </div>
             <div class="col-md-9">
@@ -47,6 +47,7 @@
         </div>
     </div>
 
-</body>
+    @RenderSection("scripts", required: false)
 
+</body>
 </html>

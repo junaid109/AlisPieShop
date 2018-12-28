@@ -9,12 +9,7 @@ namespace AlisPieShop.Models
     {
         private readonly ICategoryRepository _categoryRepository = new MockCategoryRepository();
 
-        //public MockPieRepository()
-        //{
-        //    int a;
-        //    if (categoryRepository.Categories == null)
-        //        a = categoryRepository.Categories.Count();
-        //}
+
         public IEnumerable<Pie> Pies
         {
             get

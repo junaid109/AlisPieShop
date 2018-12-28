@@ -41,6 +41,7 @@ namespace AlisPieShop.Controllers
             {
                 _shoppingCart.AddToCart(selectedPie, 1);
             }
+
             return RedirectToAction("Index");
         }
 

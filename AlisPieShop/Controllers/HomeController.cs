@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using AlisPieShop.Models;
 using AlisPieShop.ViewModels;
-using Microsoft.AspNetCore.Mvc;
+
+// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AlisPieShop.Controllers
 {
@@ -19,12 +21,7 @@ namespace AlisPieShop.Controllers
 
         public ViewResult Index()
         {
-            var homeViewModel = new HomeViewModel
-            {
-                PiesOfTheWeek = _pieRepository.PiesOfTheWeek
-            };
-
-            return View(homeViewModel);
+            return View();
         }
     }
 }
